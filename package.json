@@ -33,7 +33,7 @@
     "ipv6"
   ],
   "dependencies": {
-    "prepend-http": "^1.0.1"
+    "prepend-http": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
