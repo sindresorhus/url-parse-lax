@@ -95,6 +95,17 @@ url.parse('[2001:db8::]:8000');
 ```
 
 
+## API
+
+### urlParseLax(url)
+
+#### url
+
+Type: `string`
+
+URL to parse.
+
+
 ## Related
 
 - [url-format-lax](https://github.com/sindresorhus/url-format-lax) - Lax `url.format()` that formats a hostname and port into IPv6-compatible socket form of `hostname:port`
@@ -102,4 +113,4 @@ url.parse('[2001:db8::]:8000');
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
