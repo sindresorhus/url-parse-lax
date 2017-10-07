@@ -103,7 +103,7 @@ url.parse('[2001:db8::]:8000');
 
 Type: `string`
 
-Url to parse.
+URL to parse.
 
 
 ## Related
