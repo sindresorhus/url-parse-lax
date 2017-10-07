@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 test('wrong input', t => {
 	t.throws(() => m(5), 'Expected `url` to be of type `string`, got `number` instead.');
