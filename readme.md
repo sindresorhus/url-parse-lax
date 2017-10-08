@@ -94,39 +94,21 @@ url.parse('[2001:db8::]:8000');
 */
 ```
 
-With passing options to [`prepend-http`](https://github.com/sindresorhus/prepend-http#options):
-
-```js
-var urlParseLax = require('url-parse-lax');
-
-urlParseLax('sindresorhus.com', {https: true});
-/*
-{
-	protocol: null,
-	slashes: true,
-	auth: null,
-	host: 'sindresorhus.com',
-	port: null,
-	hostname: 'sindresorhus.com',
-	hash: null,
-	search: null,
-	query: null,
-	pathname: '/',
-	path: '/',
-	href: 'https://sindresorhus.com/'
-}
-*/
-```
-
 ## API
 
-### urlParseLax(url)
+### urlParseLax(url, [options])
 
 #### url
 
 Type: `string`
 
 URL to parse.
+
+#### options
+
+Type: `Object`
+
+See options passed to [prepend-http](https://github.com/sindresorhus/prepend-http#options).
 
 
 ## Related
