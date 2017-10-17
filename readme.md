@@ -6,14 +6,14 @@
 ## Install
 
 ```
-$ npm install --save url-parse-lax
+$ npm install url-parse-lax
 ```
 
 
 ## Usage
 
 ```js
-var urlParseLax = require('url-parse-lax');
+const urlParseLax = require('url-parse-lax');
 
 urlParseLax('sindresorhus.com');
 /*
@@ -55,7 +55,7 @@ urlParseLax('[2001:db8::]:8000');
 And with the built-in `url.parse()`:
 
 ```js
-var url = require('url');
+const url = require('url');
 
 url.parse('sindresorhus.com');
 /*
@@ -94,6 +94,7 @@ url.parse('[2001:db8::]:8000');
 */
 ```
 
+
 ## API
 
 ### urlParseLax(url, [options])
@@ -108,7 +109,12 @@ URL to parse.
 
 Type: `Object`
 
-See options passed to [prepend-http](https://github.com/sindresorhus/prepend-http#options).
+##### https
+
+Type: `boolean`<br>
+Default: `false`
+
+Prepend `https://` instead of `http://` to protocol-less URLs.
 
 
 ## Related
