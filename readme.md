@@ -94,16 +94,21 @@ url.parse('[2001:db8::]:8000');
 */
 ```
 
-
 ## API
 
-### urlParseLax(url)
+### urlParseLax(url, [options])
 
 #### url
 
 Type: `string`
 
 URL to parse.
+
+#### options
+
+Type: `Object`
+
+See options passed to [prepend-http](https://github.com/sindresorhus/prepend-http#options).
 
 
 ## Related
