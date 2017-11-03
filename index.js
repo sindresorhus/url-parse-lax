@@ -7,12 +7,5 @@ module.exports = (input, options) => {
 		throw new TypeError(`Expected \`url\` to be of type \`string\`, got \`${typeof input}\` instead.`);
 	}
 
-	const withProtocol = prependHttp(input, options);
-	const parsed = url.parse(withProtocol);
-
-	if (withProtocol !== input) {
-		parsed.protocol = null;
-	}
-
-	return parsed;
+	return url.parse(prependHttp(input, options));
 };

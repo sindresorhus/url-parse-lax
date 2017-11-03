@@ -18,7 +18,7 @@ const urlParseLax = require('url-parse-lax');
 urlParseLax('sindresorhus.com');
 /*
 {
-	protocol: null,
+	protocol: 'http:',
 	slashes: true,
 	auth: null,
 	host: 'sindresorhus.com',
