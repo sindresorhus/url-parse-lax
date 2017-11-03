@@ -18,7 +18,7 @@ const urlParseLax = require('url-parse-lax');
 urlParseLax('sindresorhus.com');
 /*
 {
-	protocol: 'http:',
+	protocol: 'https:',
 	slashes: true,
 	auth: null,
 	host: 'sindresorhus.com',
@@ -29,7 +29,7 @@ urlParseLax('sindresorhus.com');
 	query: null,
 	pathname: '/',
 	path: '/',
-	href: 'http://sindresorhus.com/'
+	href: 'https://sindresorhus.com/'
 }
 */
 
@@ -112,7 +112,7 @@ Type: `Object`
 ##### https
 
 Type: `boolean`<br>
-Default: `false`
+Default: `true`
 
 Prepend `https://` instead of `http://` to protocol-less URLs.
 

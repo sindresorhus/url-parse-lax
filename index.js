@@ -7,5 +7,6 @@ module.exports = (input, options) => {
 		throw new TypeError(`Expected \`url\` to be of type \`string\`, got \`${typeof input}\` instead.`);
 	}
 
-	return url.parse(prependHttp(input, options));
+	const finalUrl = prependHttp(input, Object.assign({https: true}, options));
+	return url.parse(finalUrl);
 };
