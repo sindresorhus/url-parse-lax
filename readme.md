@@ -97,7 +97,7 @@ url.parse('[2001:db8::]:8000');
 
 ## API
 
-### urlParseLax(url, [options])
+### urlParseLax(url, options?)
 
 #### url
 
@@ -107,7 +107,7 @@ URL to parse.
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### https
 
@@ -122,6 +122,14 @@ Prepend `https://` instead of `http://` to protocol-less URLs.
 - [url-format-lax](https://github.com/sindresorhus/url-format-lax) - Lax `url.format()` that formats a hostname and port into IPv6-compatible socket form of `hostname:port`
 
 
-## License
+---
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+<div align="center">
+	<b>
+		<a href="https://tidelift.com/subscription/pkg/npm-url-parse-lax?utm_source=npm-url-parse-lax&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
+	</b>
+	<br>
+	<sub>
+		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
+	</sub>
+</div>
