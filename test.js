@@ -1,14 +1,16 @@
 import test from 'ava';
-import m from '.';
+import urlParseLax from '.';
 
 test('wrong input', t => {
-	t.throws(() => m(5), 'Expected `url` to be of type `string`, got `number` instead.');
+	t.throws(() => {
+		urlParseLax(5);
+	}, 'Expected `url` to be of type `string`, got `number` instead.');
 });
 
 test('parse urls', t => {
-	t.is(m('sindresorhus.com').hostname, 'sindresorhus.com');
-	t.is(m('192.168.0.1:80').hostname, '192.168.0.1');
-	t.is(m('[2001:db8::]:80').hostname, '2001:db8::');
-	t.true(m('sindresorhus.com').href.startsWith('https://'));
-	t.true(m('sindresorhus.com', {https: false}).href.startsWith('http://'));
+	t.is(urlParseLax('sindresorhus.com').hostname, 'sindresorhus.com');
+	t.is(urlParseLax('192.168.0.1:80').hostname, '192.168.0.1');
+	t.is(urlParseLax('[2001:db8::]:80').hostname, '2001:db8::');
+	t.true(urlParseLax('sindresorhus.com').href.startsWith('https://'));
+	t.true(urlParseLax('sindresorhus.com', {https: false}).href.startsWith('http://'));
 });
