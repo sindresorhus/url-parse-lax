@@ -2,18 +2,16 @@
 
 > Lax [`url.parse()`](https://nodejs.org/docs/latest/api/url.html#url_url_parse_urlstr_parsequerystring_slashesdenotehost) with support for protocol-less URLs & IPs
 
-
 ## Install
 
 ```
 $ npm install url-parse-lax
 ```
 
-
 ## Usage
 
 ```js
-const urlParseLax = require('url-parse-lax');
+import urlParseLax from 'url-parse-lax';
 
 urlParseLax('sindresorhus.com');
 /*
@@ -55,7 +53,7 @@ urlParseLax('[2001:db8::]:8000');
 And with the built-in `url.parse()`:
 
 ```js
-const url = require('url');
+import url from 'url';
 
 url.parse('sindresorhus.com');
 /*
@@ -94,7 +92,6 @@ url.parse('[2001:db8::]:8000');
 */
 ```
 
-
 ## API
 
 ### urlParseLax(url, options?)
@@ -103,7 +100,7 @@ url.parse('[2001:db8::]:8000');
 
 Type: `string`
 
-URL to parse.
+The URL to parse.
 
 #### options
 
@@ -111,16 +108,14 @@ Type: `object`
 
 ##### https
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Prepend `https://` instead of `http://` to protocol-less URLs.
 
-
 ## Related
 
 - [url-format-lax](https://github.com/sindresorhus/url-format-lax) - Lax `url.format()` that formats a hostname and port into IPv6-compatible socket form of `hostname:port`
-
 
 ---
 
