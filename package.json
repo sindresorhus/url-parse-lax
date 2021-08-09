@@ -1,6 +1,6 @@
 {
 	"name": "url-parse-lax",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"description": "Lax `url.parse()` with support for protocol-less URLs & IPs",
 	"license": "MIT",
 	"repository": "sindresorhus/url-parse-lax",
