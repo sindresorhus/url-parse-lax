@@ -4,8 +4,8 @@
 
 ## Install
 
-```
-$ npm install url-parse-lax
+```sh
+npm install url-parse-lax
 ```
 
 ## Usage
@@ -53,7 +53,7 @@ urlParseLax('[2001:db8::]:8000');
 And with the built-in `url.parse()`:
 
 ```js
-import url from 'url';
+import url from 'node:url';
 
 url.parse('sindresorhus.com');
 /*
@@ -116,15 +116,3 @@ Prepend `https://` instead of `http://` to protocol-less URLs.
 ## Related
 
 - [url-format-lax](https://github.com/sindresorhus/url-format-lax) - Lax `url.format()` that formats a hostname and port into IPv6-compatible socket form of `hostname:port`
-
----
-
-<div align="center">
-	<b>
-		<a href="https://tidelift.com/subscription/pkg/npm-url-parse-lax?utm_source=npm-url-parse-lax&utm_medium=referral&utm_campaign=readme">Get professional support for this package with a Tidelift subscription</a>
-	</b>
-	<br>
-	<sub>
-		Tidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.
-	</sub>
-</div>
