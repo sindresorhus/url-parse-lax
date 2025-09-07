@@ -1,6 +1,6 @@
 # url-parse-lax
 
-> Lax [`url.parse()`](https://nodejs.org/docs/latest/api/url.html#url_url_parse_urlstr_parsequerystring_slashesdenotehost) with support for protocol-less URLs & IPs
+> Lax URL parsing with support for protocol-less URLs and IPs
 
 ## Install
 
@@ -27,25 +27,33 @@ urlParseLax('sindresorhus.com');
 	query: null,
 	pathname: '/',
 	path: '/',
-	href: 'https://sindresorhus.com/'
+	href: 'https://sindresorhus.com/',
+	searchParams: URLSearchParams {},
+	origin: 'https://sindresorhus.com',
+	username: null,
+	password: null
 }
 */
 
 urlParseLax('[2001:db8::]:8000');
 /*
 {
-	protocol: null,
+	protocol: 'https:',
 	slashes: true,
 	auth: null,
 	host: '[2001:db8::]:8000',
 	port: '8000',
-	hostname: '2001:db8::',
+	hostname: '[2001:db8::]',
 	hash: null,
 	search: null,
 	query: null,
 	pathname: '/',
 	path: '/',
-	href: 'http://[2001:db8::]:8000/'
+	href: 'https://[2001:db8::]:8000/',
+	searchParams: URLSearchParams {},
+	origin: 'https://[2001:db8::]:8000',
+	username: null,
+	password: null
 }
 */
 ```
@@ -67,9 +75,9 @@ url.parse('sindresorhus.com');
 	hash: null,
 	search: null,
 	query: null,
-	pathname: 'sindresorhus',
-	path: 'sindresorhus',
-	href: 'sindresorhus'
+	pathname: 'sindresorhus.com',
+	path: 'sindresorhus.com',
+	href: 'sindresorhus.com'
 }
 */
 
@@ -115,4 +123,4 @@ Prepend `https://` instead of `http://` to protocol-less URLs.
 
 ## Related
 
-- [url-format-lax](https://github.com/sindresorhus/url-format-lax) - Lax `url.format()` that formats a hostname and port into IPv6-compatible socket form of `hostname:port`
+- [url-format-lax](https://github.com/sindresorhus/url-format-lax) - Formats a hostname and port into IPv6-compatible socket form of `hostname:port`
